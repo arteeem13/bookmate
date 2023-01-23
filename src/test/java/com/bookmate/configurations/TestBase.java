@@ -8,19 +8,19 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class TestBase {
     private static final String browserName = System.getProperty("browser", "chrome");
     private static final String browserSize = System.getProperty("browserSize", "1920x1080");
-//    private static final String browserVersion = System.getProperty("browserVersion", "98.0");
-//    private static final String url = System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
-//    public static CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
+    private static final String browserVersion = System.getProperty("browserVersion", "98.0");
+    private static final String url = System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
+    public static CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
 
     @BeforeAll
     public static void beforeAllTests(){
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("enableVNC", true);
-//        capabilities.setCapability("enableVideo", true);
-//        Configuration.browserCapabilities = capabilities;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
         Configuration.browser = browserName;
-//        Configuration.browserVersion = browserVersion;
+        Configuration.browserVersion = browserVersion;
         Configuration.browserSize = browserSize;
-//        Configuration.remote = "https://" + credentials.login() + ":" + credentials.password() + "@" + url;
+        Configuration.remote = "https://" + credentials.login() + ":" + credentials.password() + "@" + url;
     }
 }
