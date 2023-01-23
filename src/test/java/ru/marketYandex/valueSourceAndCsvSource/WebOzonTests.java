@@ -39,7 +39,6 @@ public class WebOzonTests extends TestBase {
             "USD, $",
     })
     @ParameterizedTest(name = "Отображается {1} для валюты {0} в карточке товара")
-    @Tag("properties")
     void checkCurrencyIconInProductCardWithCsvSource(String currency, String icon) {
         step("Открываем главную страницу" + URL_OZON, () -> {
             open(URL_OZON);
