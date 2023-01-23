@@ -63,6 +63,14 @@ tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 
+    systemProperties += [
+            'junit.jupiter.execution.parallel.enabled'                 : System.getProperty("parallelRun"),
+            'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
+            'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
+            'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
+            'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads", "4").toInteger()
+    ]
+
     testLogging {
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
