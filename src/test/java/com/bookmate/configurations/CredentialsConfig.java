@@ -1,4 +1,4 @@
-package ru.marketYandex.configurations;
+package com.bookmate.configurations;
 
 import org.aeonbits.owner.Config;
 

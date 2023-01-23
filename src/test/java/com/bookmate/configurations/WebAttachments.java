@@ -1,4 +1,4 @@
-package ru.marketYandex.configurations;
+package com.bookmate.configurations;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
