@@ -13,11 +13,11 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 @DisplayName("Проверка веб-элементов главной страницы")
+@Tag("ui_tests")
 public class WebMainPageTests extends TestBase {
-    private final String BASE_URL = "https://bookmate.com/";
+    private final String BASE_URL = "https://ru.bookmate.com/";
 
     @DisplayName("Проверка категорий в главном меню на главной странице")
-    @Tag("properties")
     @ValueSource(strings = {
             "Поиск",
             "Книги",
@@ -33,7 +33,6 @@ public class WebMainPageTests extends TestBase {
     }
 
     @DisplayName("В блоке Бестселлеры 10 книг")
-    @Tag("properties")
     @Test
     void displayedEightBooksInBestseller() {
         Steps.openPage(BASE_URL);
@@ -48,7 +47,6 @@ public class WebMainPageTests extends TestBase {
     }
 
     @DisplayName("Проверка заголовков страниц в футере")
-    @Tag("properties")
     @CsvSource({
             "О Букмейте, Книги становятся ближе",
             "Библиотека, Книги",

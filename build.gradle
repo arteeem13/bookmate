@@ -68,7 +68,7 @@ tasks.withType(Test) {
             'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
             'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
             'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-            'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads", "4").toInteger()
+            'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads", "6").toInteger()
     ]
 
     testLogging {
@@ -81,7 +81,7 @@ tasks.withType(Test) {
 
 task ui_tests(type: Test) {
     useJUnitPlatform {
-        includeTags "properties"
+        includeTags "ui_tests"
     }
 }
 
