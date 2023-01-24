@@ -1,7 +1,9 @@
 package com.bookmate.configurations;
 
+import com.bookmate.helpers.Attachments;
 import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -22,5 +24,13 @@ public class TestBase {
         Configuration.browserVersion = browserVersion;
         Configuration.browserSize = browserSize;
         Configuration.remote = "https://" + credentials.login() + ":" + credentials.password() + "@" + url;
+    }
+
+    @AfterEach
+    public void afterEachTests() {
+        Attachments.screenshotAs("Screenshot");
+        Attachments.pageSource();
+        Attachments.browserConsoleLogs();
+        Attachments.addVideo();
     }
 }

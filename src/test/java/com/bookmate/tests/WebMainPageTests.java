@@ -1,5 +1,6 @@
 package com.bookmate.tests;
 
+import com.bookmate.configurations.TestBase;
 import com.bookmate.helpers.Steps;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -12,7 +13,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 @DisplayName("Проверка веб-элементов главной страницы")
-public class WebMainPageTests {
+public class WebMainPageTests extends TestBase {
     private final String BASE_URL = "https://bookmate.com/";
 
     @DisplayName("Проверка категорий в главном меню на главной странице")
