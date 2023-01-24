@@ -1,4 +1,4 @@
-#### ![bookmate](src/test/resources/img/bookmate.png)
+#### ![bookmate](src/test/resources/img/bookmate1.png)
 ### ***Проект автотестирования для bookmate.com выполнен с использованием следующего стека:***
 #### :muscle: *Java*
 #### :computer: *Junit5*
