@@ -24,8 +24,8 @@ public class MainPageTests extends TestBase {
             "Полки",
             "Подарить подписку"
     })
-    @ParameterizedTest
-    @DisplayName("Есть категория {0} в хедере главного меню")
+    @ParameterizedTest(name = "Есть категория {0} в хедере главного меню")
+    @DisplayName("Шапка. ")
     void displayedCategoriesInTopMenu(String searchQuery) {
         Steps.openPage(BASE_URL_RU);
         Steps.elementShouldHaveText($(".header"), "Хеддер главного меню", searchQuery);
@@ -56,8 +56,8 @@ public class MainPageTests extends TestBase {
             "Правовая информация, Правовая информация",
             "Карта сайта, Карта сайта"
     })
-    @ParameterizedTest
-    @DisplayName("Отображается заголовок {1} на странице {0} при переходе из футера")
+    @ParameterizedTest(name = "Отображается заголовок {1} на странице {0} при переходе из футера")
+    @DisplayName("Футер. ")
     void clickableCategoriesInFooter(String footerCategories, String header) {
         Steps.openPage(BASE_URL_RU);
         Steps.scrollToElement($(".footer"), "футера");
