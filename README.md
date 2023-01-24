@@ -22,7 +22,7 @@
 ![attach](src/test/resources/img/attach.png)
 #### :heavy_check_mark: *Настроена инфраструктура для удаленного запуска тестов*
 ![jenkins](src/test/resources/img/jenkins.png)
-#### :heavy_check_mark: *Гибкий запуск тестов с передачей параметров из Jenkins: выбор браузера, версии*
+#### :heavy_check_mark: *Гибкий запуск тестов с передачей параметров из Jenkins: выбор браузера, версии, размера*
 ![jenkins2](src/test/resources/img/jenkins2.png)
 #### :heavy_check_mark: *Настроена отчетность Allure TestOps*
 ![AllureTestOps](src/test/resources/img/AllureTestOps.png)
@@ -35,6 +35,6 @@
 #### :heavy_check_mark: *Карточка книги*
 #### :heavy_check_mark: *Поиск*
 #### :heavy_check_mark: *Проверка вкладки console log*
-#### :heavy_multiplication_x: *Расширение текущих кейсов*
-#### :heavy_multiplication_x: *Локализация и интернационализация*
-#### :heavy_multiplication_x: *Подписка*
+#### :clock8: *Расширение текущих кейсов*
+#### :clock8: *Локализация и интернационализация*
+#### :clock8: *Подписка*
