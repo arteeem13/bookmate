@@ -13,8 +13,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
-@DisplayName("Проверка авторизации")
-@Tag("ui_tests")
+@DisplayName("Авторизация")
+@Tag("tests")
 public class AuthorizationTests extends TestBase {
     private static final AuthConfig credentials = ConfigFactory.create(AuthConfig.class);
 

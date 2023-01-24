@@ -13,8 +13,8 @@ import static com.bookmate.dataTests.Constants.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-@DisplayName("Проверка веб-элементов главной страницы")
-@Tag("ui_tests")
+@DisplayName("Веб-элементы главной страницы")
+@Tag("tests")
 public class MainPageTests extends TestBase {
     @ValueSource(strings = {
             "Поиск",
@@ -25,7 +25,7 @@ public class MainPageTests extends TestBase {
             "Подарить подписку"
     })
     @ParameterizedTest(name = "Есть категория {0} в хедере главного меню")
-    @DisplayName("Проверки хедера. ")
+    @DisplayName("Шапка. ")
     void displayedCategoriesInTopMenu(String searchQuery) {
         Steps.openPage(BASE_URL_RU);
         Steps.elementShouldHaveText($(".header"), "Хеддер главного меню", searchQuery);
@@ -57,7 +57,7 @@ public class MainPageTests extends TestBase {
             "Карта сайта, Карта сайта",
     })
     @ParameterizedTest(name = "Отображается заголовок {1} на странице {0} при переходе из футера")
-    @DisplayName("Проверки футера. ")
+    @DisplayName("Футер. ")
     void clickableCategoriesInFooter(String footerCategories, String header) {
         Steps.openPage(BASE_URL_RU);
         Steps.scrollToElement($(".footer"), "футера");
