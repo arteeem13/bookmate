@@ -1,7 +1,7 @@
 ![bookmate](src/test/resources/img/bookmate.png)
 ## ***Проект web-автотестирования для bookmate.com выполнен с использованием следующего стека:***
 #### :muscle: *Java*
-#### :computer: *Junit5*
+#### :mag: *Junit5*
 #### :hammer: *Gradle*
 #### :computer: *Selenide*
 #### :bar_chart: *Allure Reports, Allure TestOps*
