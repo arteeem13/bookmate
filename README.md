@@ -2,14 +2,14 @@
 ## ***Проект web-автотестирования для bookmate.com выполнен с использованием следующего стека:***
 #### :muscle: *Java*
 #### :computer: *Junit5*
-#### :construction_worker: *Gradle*
+#### :hammer: *Gradle*
 #### :computer: *Selenide*
 #### :bar_chart: *Allure Reports, Allure TestOps*
 #### :cloud: *Selenoid*
 #### :construction_worker: *Jenkins*
 #### :iphone: *Telegram*
 
-### **Что сделано:**
+### :bulb: **Что сделано:**
 #### :heavy_check_mark: *Шаги описаны в отельном классе [Steps](https://github.com/arteeem13/bookmate/blob/main/src/test/java/com/bookmate/dataTests/Steps.java)*
 ![steps](src/test/resources/img/steps.png)
 #### :heavy_check_mark: *Реализована параметризация тестов*
@@ -29,7 +29,7 @@
 #### :heavy_check_mark: *Создан телеграмм бот, который сообщает о результатах прогона тестов*
 ![telegram](src/test/resources/img/tg.png)
 
-### **Реализованные тестовые сценарии для проверки и запланированные:**
+### :bulb: **Реализованные тестовые сценарии для проверки и запланированные:**
 #### :heavy_check_mark: *Авторизация*
 #### :heavy_check_mark: *Веб-элементы главной страницы*
 #### :heavy_check_mark: *Карточка книги*
