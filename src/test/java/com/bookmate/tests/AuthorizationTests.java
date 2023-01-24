@@ -31,6 +31,7 @@ public class AuthorizationTests extends TestBase {
         Steps.clickOnElement($(".auth__subaction").$(byText("Почта")), "кнопке Почта");
         Steps.setValueInField($("[name=email]"), "email", email);
         Steps.setValueInField($("[name=password]"), "пароль", password);
+        sleep(2000);
         Steps.clickOnElement($(byText("Войти")), "кнопке Войти");
         Steps.elementContainsText($(".user-avatar").lastChild(),
                 "Селектор хеддера user-avatar", login);
