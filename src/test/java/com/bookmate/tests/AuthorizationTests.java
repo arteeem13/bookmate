@@ -1,6 +1,7 @@
 package com.bookmate.tests;
 
 import com.bookmate.configurations.AuthConfig;
+import com.bookmate.configurations.TestBase;
 import com.bookmate.dataTests.Steps;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
@@ -14,7 +15,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 @DisplayName("Проверка авторизации")
 @Tag("ui_tests")
-public class AuthorizationTests {
+public class AuthorizationTests extends TestBase {
     private static final AuthConfig credentials = ConfigFactory.create(AuthConfig.class);
 
     @DisplayName("Успешная авторизация при вводе валидных email и password")
