@@ -14,7 +14,10 @@
 ![steps](src/test/resources/img/steps.png)
 #### :heavy_check_mark: *Реализована параметризация тестов*
 #### :heavy_check_mark: *Многопоточный запуск*
+#### :heavy_check_mark: *Отчетность в Allure*
+![allureReport](src/test/resources/img/allureReport.png)![allureReport2](src/test/resources/img/allureReport2.png)
 #### :heavy_check_mark: *Добавлены аттачменты: видео, скриншоты, логи, page source*
+![video](src/test/resources/img/video.gif)
 #### :heavy_check_mark: *Аттачменты передаются в Allure Reports*
 ![attach](src/test/resources/img/attach.png)
 #### :heavy_check_mark: *Настроена инфраструктура для удаленного запуска тестов*
