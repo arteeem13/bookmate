@@ -24,4 +24,4 @@
 #### :heavy_check_mark: *Настроена отчетность Allure TestOps*
 ![AllureTestOps](src/test/resources/img/AllureTestOps.png)
 #### :heavy_check_mark: *Создан телеграмм бот, который сообщает о результатах прогона тестов*
-![telegram](src/test/resources/img/tg2.png)
+![telegram](src/test/resources/img/tg.png)
