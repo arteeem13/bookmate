@@ -9,7 +9,7 @@
 #### :construction_worker: *Jenkins*
 #### :iphone: *Telegram*
 
-### **Что реализовано:**
+### **Что сделано:**
 #### :heavy_check_mark: *Шаги описаны в отельном классе [Steps](https://github.com/arteeem13/bookmate/blob/main/src/test/java/com/bookmate/dataTests/Steps.java)*
 ![steps](src/test/resources/img/steps.png)
 #### :heavy_check_mark: *Реализована параметризация тестов*
@@ -22,9 +22,19 @@
 ![attach](src/test/resources/img/attach.png)
 #### :heavy_check_mark: *Настроена инфраструктура для удаленного запуска тестов*
 ![jenkins](src/test/resources/img/jenkins.png)
-#### :heavy_check_mark: *Гибкий запуск тестов с передачей параметров из Jenkins*
+#### :heavy_check_mark: *Гибкий запуск тестов с передачей параметров из Jenkins: выбор браузера, версии*
 ![jenkins2](src/test/resources/img/jenkins2.png)
 #### :heavy_check_mark: *Настроена отчетность Allure TestOps*
 ![AllureTestOps](src/test/resources/img/AllureTestOps.png)
 #### :heavy_check_mark: *Создан телеграмм бот, который сообщает о результатах прогона тестов*
 ![telegram](src/test/resources/img/tg.png)
+
+### **Реализованные тестовые сценарии для проверки и запланированные:**
+#### :heavy_check_mark: *Авторизация*
+#### :heavy_check_mark: *Веб-элементы главной страницы*
+#### :heavy_check_mark: *Карточка книги*
+#### :heavy_check_mark: *Поиск*
+#### :heavy_check_mark: *Проверка вкладки console log*
+#### :heavy_multiplication_x: *Расширение текущих кейсов*
+#### :heavy_multiplication_x: *Локализация и интернационализация*
+#### :heavy_multiplication_x: *Подписка*
