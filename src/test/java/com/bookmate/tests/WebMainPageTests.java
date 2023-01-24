@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 @DisplayName("Проверка веб-элементов главной страницы")
 @Tag("ui_tests")
 public class WebMainPageTests extends TestBase {
+
     private final String BASE_URL = "https://ru.bookmate.com/";
 
     @DisplayName("Проверка категорий в главном меню на главной странице")
