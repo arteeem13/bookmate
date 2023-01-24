@@ -1,6 +1,6 @@
 package com.bookmate.configurations;
 
-import com.bookmate.helpers.Attachments;
+import com.bookmate.dataTests.Attachments;
 import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;

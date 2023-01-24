@@ -1,4 +1,4 @@
-package com.bookmate.helpers;
+package com.bookmate.dataTests;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
