@@ -10,7 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class TestBase {
     private static final String browserName = System.getProperty("browser", "chrome");
     private static final String browserSize = System.getProperty("browserSize", "1920x1080");
-    private static final String browserVersion = System.getProperty("browserVersion", "98.0");
+    private static final String browserVersion = System.getProperty("browserVersion", "100.0");
     private static final String url = System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
     public static CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
 

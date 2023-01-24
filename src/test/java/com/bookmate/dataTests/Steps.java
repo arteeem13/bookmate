@@ -60,4 +60,9 @@ public class Steps {
             selectorElement.isEnabled();
         });
     }
+    public static void elementIsEnable(SelenideElement selectorElement, String nameElement){
+        step("Элемент " + nameElement + " активен", () -> {
+            selectorElement.isEnabled();
+        });
+    }
 }
