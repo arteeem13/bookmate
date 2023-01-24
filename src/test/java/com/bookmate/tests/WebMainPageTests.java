@@ -1,6 +1,6 @@
 package com.bookmate.tests;
 
-import com.codeborne.selenide.Condition;
+import com.bookmate.helpers.Steps;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -10,8 +10,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
+@DisplayName("Проверка веб-элементов главной страницы")
 public class WebMainPageTests {
     private final String BASE_URL = "https://bookmate.com/";
 
@@ -27,24 +27,26 @@ public class WebMainPageTests {
     })
     @ParameterizedTest(name = "Есть категория {0} в хедере главного меню")
     void displayedCategoriesInTopMenu(String searchQuery) {
-        open(BASE_URL);
-        $(".header").shouldHave(Condition.text(searchQuery));
+        Steps.openPage(BASE_URL);
+        Steps.elementShouldHaveText($(".header"), "Хеддер главного меню", searchQuery);
     }
 
     @DisplayName("В блоке Бестселлеры 10 книг")
     @Tag("properties")
     @Test
     void displayedEightBooksInBestseller() {
-        open(BASE_URL);
+        Steps.openPage(BASE_URL);
         int countBooksBestsellers = 10;
         $(byText("Бестселлеры")).scrollTo();
         for (int i = 0; i < countBooksBestsellers; i++) {
-            $(".index-layout-showcase__books").$(".book").sibling(i).isDisplayed();
+            Steps.elementIsDisplayed($(".index-layout-showcase__books").$(".book").sibling(i),
+                    "10 книг в разделе бестселлеры");
         }
-        $(".index-layout-showcase__books").$(".book").sibling(countBooksBestsellers).exists();
+        Steps.elementExist($(".index-layout-showcase__books").$(".book").sibling(countBooksBestsellers),
+                " 11я книга в разделе бестселлеры");
     }
 
-    @DisplayName("Проверка категорий в главном меню на главной странице")
+    @DisplayName("Проверка заголовков страниц в футере")
     @Tag("properties")
     @CsvSource({
             "О Букмейте, Книги становятся ближе",
@@ -59,9 +61,9 @@ public class WebMainPageTests {
     })
     @ParameterizedTest(name = "Отображается заголовок {1} на странице {0} при переходе из футера")
     void clickableCategoriesInFooter(String footerCategories, String header) {
-        open(BASE_URL);
-        $(".footer").scrollTo();
-        $(".footer").$(byText(footerCategories)).click();
-        $(".heading").shouldHave(Condition.text(header));
+        Steps.openPage(BASE_URL);
+        Steps.scrollToElement($(".footer"), "футера");
+        Steps.clickOnElement($(".footer").$(byText(footerCategories)), footerCategories);
+        Steps.elementShouldHaveText($(".heading"), "Заголовок страницы",header);
     }
 }
