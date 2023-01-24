@@ -10,10 +10,10 @@
 ### :iphone: *Telegram*
 
 ### **Что реализовано:**
-#### [х] *Шаги описаны в отельном классе [Steps](https://github.com/arteeem13/bookmate/blob/main/src/test/java/com/bookmate/dataTests/Steps.java)*
+#### :heavy_check_mark: *Шаги описаны в отельном классе [Steps](https://github.com/arteeem13/bookmate/blob/main/src/test/java/com/bookmate/dataTests/Steps.java)*
 ![steps](src/test/resources/img/steps.png)
-#### [х] *Реализована параметризация тестов*
-#### [х] *Многопоточный запуск*
-#### [х] *Добавлены аттачменты: видео, скриншоты, логи, page source*
-#### [x] *Аттачменты передаются в отчет Allure*
+#### :heavy_check_mark: *Реализована параметризация тестов*
+#### :heavy_check_mark: *Многопоточный запуск*
+#### :heavy_check_mark: *Добавлены аттачменты: видео, скриншоты, логи, page source*
+#### :heavy_check_mark: *Аттачменты передаются в отчет Allure*
 ![attach](src/test/resources/img/attach.png)
