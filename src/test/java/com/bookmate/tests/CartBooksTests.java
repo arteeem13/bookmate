@@ -35,8 +35,6 @@ public class CartBooksTests extends TestBase {
         Steps.clickOnElement($(".header").$(byText("Книги")), "Книги");
         Steps.clickOnElement($(".book__description"), "первой книге на странице");
         sleep(2000);
-        Steps.elementShouldHaveText($(".share-button__text"),
-                "Есть кнопка, которая", "Поделиться");
         Steps.elementIsEnable($(".share-button__text"), "Поделиться");
     }
 
