@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 @DisplayName("Веб-элементы главной страницы")
-@Tag("tests")
+@Tag("properties")
 public class MainPageTests extends TestBase {
     @ValueSource(strings = {
             "Поиск",

@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("Проверка вкладки console log")
-@Tag("tests")
+@Tag("properties")
 public class LoggerTest extends TestBase {
 
     @Test

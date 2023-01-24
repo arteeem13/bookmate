@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
 @DisplayName("Авторизация")
-@Tag("tests")
+@Tag("properties")
 public class AuthorizationTests extends TestBase {
     private static final AuthConfig credentials = ConfigFactory.create(AuthConfig.class);
 

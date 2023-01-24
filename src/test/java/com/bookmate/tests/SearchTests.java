@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
 @DisplayName("Поиск")
-@Tag("tests")
+@Tag("properties")
 public class SearchTests extends TestBase {
     @CsvSource({
             "Яков Миркин, Яков Миркин",

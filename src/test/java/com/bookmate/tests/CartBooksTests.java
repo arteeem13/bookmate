@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
 @DisplayName("Карточка книги")
-@Tag("tests")
+@Tag("properties")
 public class CartBooksTests extends TestBase {
     @Test
     @DisplayName("Есть активная кнопка Читать")

@@ -79,9 +79,9 @@ tasks.withType(Test) {
     }
 }
 
-task tests(type: Test) {
+task ui_tests(type: Test) {
     useJUnitPlatform {
-        includeTags "tests"
+        includeTags "properties"
     }
 }
 
