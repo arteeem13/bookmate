@@ -1,5 +1,6 @@
 ![bookmate](src/test/resources/img/bookmate.png)
-## ***Проект web-автотестирования для bookmate.com выполнен с использованием следующего стека:***
+## ***Проект web-автотестов для bookmate.com***
+### :bulb: **Выполнен с использованием следующего стека:**
 #### :muscle: *Java*
 #### :mag: *Junit5*
 #### :hammer: *Gradle*
