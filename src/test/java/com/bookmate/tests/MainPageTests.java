@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 @DisplayName("Проверка веб-элементов главной страницы")
 @Tag("ui_tests")
-public class WebMainPageTests extends TestBase {
+public class MainPageTests extends TestBase {
     @ValueSource(strings = {
             "Поиск",
             "Книги",
@@ -31,6 +31,7 @@ public class WebMainPageTests extends TestBase {
     }
 
     @Test
+    @DisplayName("В разделе Бестселлеры отображается 10 книг")
     void displayedEightBooksInBestseller() {
         Steps.openPage(BASE_URL_RU);
         int countBooksBestsellers = 10;
