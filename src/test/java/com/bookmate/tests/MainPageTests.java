@@ -9,7 +9,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static com.bookmate.dataTests.Constants.*;
+import static com.bookmate.dataTests.Constants.BASE_URL_RU;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -62,6 +62,6 @@ public class MainPageTests extends TestBase {
         Steps.openPage(BASE_URL_RU);
         Steps.scrollToElement($(".footer"), "футера");
         Steps.clickOnElement($(".footer").$(byText(footerCategories)), footerCategories);
-        Steps.elementShouldHaveText($(".heading"), "Заголовок страницы",header);
+        Steps.elementShouldHaveText($(".heading"), "Заголовок страницы", header);
     }
 }

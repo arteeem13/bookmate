@@ -3,7 +3,6 @@ package com.bookmate.tests;
 import com.bookmate.configurations.AuthConfig;
 import com.bookmate.configurations.TestBase;
 import com.bookmate.dataTests.Steps;
-import io.qameta.allure.Feature;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;

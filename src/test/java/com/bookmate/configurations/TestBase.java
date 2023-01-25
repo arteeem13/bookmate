@@ -15,7 +15,7 @@ public class TestBase {
     public static CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
 
     @BeforeAll
-    public static void beforeAllTests(){
+    public static void beforeAllTests() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);

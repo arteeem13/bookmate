@@ -2,7 +2,6 @@ package com.bookmate.tests;
 
 import com.bookmate.configurations.TestBase;
 import com.bookmate.dataTests.Steps;
-import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

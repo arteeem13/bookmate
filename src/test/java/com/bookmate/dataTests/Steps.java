@@ -7,20 +7,20 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class Steps {
-     public static void openPage(String baseURL) {
+    public static void openPage(String baseURL) {
         step("Открываем страницу " + baseURL, () -> {
             open(baseURL);
         });
     }
 
     public static void elementShouldHaveText(SelenideElement selectorElement, String nameElement, String shouldHaveText) {
-        step(nameElement+ " содержит текст " + shouldHaveText, () -> {
+        step(nameElement + " содержит текст " + shouldHaveText, () -> {
             selectorElement.shouldHave(Condition.text(shouldHaveText));
         });
     }
 
     public static void elementContainsText(SelenideElement selectorElement, String nameElement, String shouldHaveText) {
-        step(nameElement+ " содержит текст " + shouldHaveText, () -> {
+        step(nameElement + " содержит текст " + shouldHaveText, () -> {
             selectorElement.toString().contains(shouldHaveText);
         });
     }
@@ -49,18 +49,19 @@ public class Steps {
         });
     }
 
-    public static void setValueInField (SelenideElement selectorElement, String nameField, String value){
+    public static void setValueInField(SelenideElement selectorElement, String nameField, String value) {
         step("Записываем " + value + " в поле " + nameField, () -> {
             selectorElement.setValue(value);
         });
     }
 
-    public static void elementIsDisabled(SelenideElement selectorElement, String nameElement){
+    public static void elementIsDisabled(SelenideElement selectorElement, String nameElement) {
         step("Элемент " + nameElement + " неактивен", () -> {
             selectorElement.isEnabled();
         });
     }
-    public static void elementIsEnable(SelenideElement selectorElement, String nameElement){
+
+    public static void elementIsEnable(SelenideElement selectorElement, String nameElement) {
         step("Элемент " + nameElement + " активен", () -> {
             selectorElement.isEnabled();
         });
