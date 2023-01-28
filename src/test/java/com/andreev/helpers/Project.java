@@ -1,5 +1,6 @@
-package com.bookmate.configurations;
+package com.andreev.helpers;
 
+import com.andreev.configurations.ProjectConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 public class Project {

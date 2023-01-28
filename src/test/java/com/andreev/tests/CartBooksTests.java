@@ -1,14 +1,13 @@
-package com.bookmate.tests;
+package com.andreev.tests;
 
-import com.bookmate.configurations.TestBase;
-import com.bookmate.dataTests.Steps;
+import com.andreev.data.Steps;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static com.bookmate.dataTests.Constants.BASE_URL_RU;
+import static com.andreev.data.Constants.BASE_URL_RU;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;

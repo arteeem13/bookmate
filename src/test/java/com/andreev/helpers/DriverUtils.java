@@ -1,6 +1,5 @@
-package com.bookmate.helpers;
+package com.andreev.helpers;
 
-import com.bookmate.configurations.Project;
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

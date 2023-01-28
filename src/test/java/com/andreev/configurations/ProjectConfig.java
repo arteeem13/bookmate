@@ -1,4 +1,4 @@
-package com.bookmate.configurations;
+package com.andreev.configurations;
 
 import org.aeonbits.owner.Config;
 

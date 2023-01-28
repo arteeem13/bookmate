@@ -1,6 +1,7 @@
-package com.bookmate.configurations;
+package com.andreev.tests;
 
-import com.bookmate.dataTests.Attachments;
+import com.andreev.configurations.CredentialsConfig;
+import com.andreev.helpers.Attachments;
 import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;

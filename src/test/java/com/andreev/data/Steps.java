@@ -1,4 +1,4 @@
-package com.bookmate.dataTests;
+package com.andreev.data;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
