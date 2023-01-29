@@ -37,7 +37,7 @@
 #### :heavy_check_mark: *Настроена инфраструктура для удаленного запуска тестов*
 ![jenkins](src/test/resources/img/jenkins.png)
 #### :heavy_check_mark: *Гибкий запуск тестов с передачей параметров из Jenkins: выбор браузера, версии, размера*
-![jenkins2](src/test/resources/img/jenkins2.png)
+![jenkins2](src/test/resources/img/jenkins3.png)
 #### :heavy_check_mark: *Настроена отчетность Allure TestOps*
 ![AllureTestOps](src/test/resources/img/AllureTestOps.png)
 #### :heavy_check_mark: *Создан телеграмм бот, который сообщает о результатах прогона тестов*
