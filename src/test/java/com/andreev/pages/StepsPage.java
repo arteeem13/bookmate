@@ -1,4 +1,4 @@
-package com.andreev.data;
+package com.andreev.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -6,7 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class Steps {
+public class StepsPage {
     public static void openPage(String baseURL) {
         step("Открываем страницу " + baseURL, () -> {
             open(baseURL);

@@ -1,6 +1,6 @@
 package com.andreev.tests;
 
-import com.andreev.data.Steps;
+import com.andreev.pages.StepsPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -26,21 +26,21 @@ public class MainPageTests extends TestBase {
     @ParameterizedTest(name = "Есть категория {0} в хедере главного меню")
     @DisplayName("Шапка. ")
     void displayedCategoriesInTopMenu(String searchQuery) {
-        Steps.openPage(BASE_URL_RU);
-        Steps.elementShouldHaveText($(".header"), "Хеддер главного меню", searchQuery);
+        StepsPage.openPage(BASE_URL_RU);
+        StepsPage.elementShouldHaveText($(".header"), "Хеддер главного меню", searchQuery);
     }
 
     @Test
     @DisplayName("В разделе Бестселлеры отображается 10 книг")
     void displayedEightBooksInBestseller() {
-        Steps.openPage(BASE_URL_RU);
+        StepsPage.openPage(BASE_URL_RU);
         int countBooksBestsellers = 10;
         $(byText("Бестселлеры")).scrollTo();
         for (int i = 0; i < countBooksBestsellers; i++) {
-            Steps.elementIsDisplayed($(".index-layout-showcase__books").$(".book").sibling(i),
+            StepsPage.elementIsDisplayed($(".index-layout-showcase__books").$(".book").sibling(i),
                     "10 книг в блоке бестселлеры");
         }
-        Steps.elementExist($(".index-layout-showcase__books").$(".book").sibling(countBooksBestsellers),
+        StepsPage.elementExist($(".index-layout-showcase__books").$(".book").sibling(countBooksBestsellers),
                 " 11я книга в разделе бестселлеры");
     }
 
@@ -58,9 +58,9 @@ public class MainPageTests extends TestBase {
     @ParameterizedTest(name = "Отображается заголовок {1} на странице {0} при переходе из футера")
     @DisplayName("Футер. ")
     void clickableCategoriesInFooter(String footerCategories, String header) {
-        Steps.openPage(BASE_URL_RU);
-        Steps.scrollToElement($(".footer"), "футера");
-        Steps.clickOnElement($(".footer").$(byText(footerCategories)), footerCategories);
-        Steps.elementShouldHaveText($(".heading"), "Заголовок страницы", header);
+        StepsPage.openPage(BASE_URL_RU);
+        StepsPage.scrollToElement($(".footer"), "футера");
+        StepsPage.clickOnElement($(".footer").$(byText(footerCategories)), footerCategories);
+        StepsPage.elementShouldHaveText($(".heading"), "Заголовок страницы", header);
     }
 }

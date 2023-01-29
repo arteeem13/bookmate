@@ -1,6 +1,6 @@
 package com.andreev.tests;
 
-import com.andreev.data.Steps;
+import com.andreev.pages.StepsPage;
 import com.andreev.helpers.DriverUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -17,7 +17,7 @@ public class LoggerTest extends TestBase {
     @Test
     @DisplayName("Страница console log не содержит ошибок")
     void consoleShouldNotHaveErrorsTest() {
-        Steps.openPage(BASE_URL_RU);
+        StepsPage.openPage(BASE_URL_RU);
         step("Проверка наличия ошибок в консоли с текстом 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
             String errorText = "SEVERE";

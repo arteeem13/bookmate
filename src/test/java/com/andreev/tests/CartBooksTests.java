@@ -1,6 +1,6 @@
 package com.andreev.tests;
 
-import com.andreev.data.Steps;
+import com.andreev.pages.StepsPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -18,23 +18,23 @@ public class CartBooksTests extends TestBase {
     @Test
     @DisplayName("Есть активная кнопка Читать")
     void bottomRead() {
-        Steps.openPage(BASE_URL_RU);
-        Steps.clickOnElement($(".header").$(byText("Книги")), "Книги");
-        Steps.clickOnElement($(".book__description"), "первой книге на странице");
+        StepsPage.openPage(BASE_URL_RU);
+        StepsPage.clickOnElement($(".header").$(byText("Книги")), "Книги");
+        StepsPage.clickOnElement($(".book__description"), "первой книге на странице");
         sleep(2000);
-        Steps.elementShouldHaveText($("#read-button"),
+        StepsPage.elementShouldHaveText($("#read-button"),
                 "Есть кнопка, которая", "Читать");
-        Steps.elementIsEnable($("#read-button"), "Читать");
+        StepsPage.elementIsEnable($("#read-button"), "Читать");
     }
 
     @Test
     @DisplayName("Есть активная кнопка Поделиться")
     void bottomShare() {
-        Steps.openPage(BASE_URL_RU);
-        Steps.clickOnElement($(".header").$(byText("Книги")), "Книги");
-        Steps.clickOnElement($(".book__description"), "первой книге на странице");
+        StepsPage.openPage(BASE_URL_RU);
+        StepsPage.clickOnElement($(".header").$(byText("Книги")), "Книги");
+        StepsPage.clickOnElement($(".book__description"), "первой книге на странице");
         sleep(2000);
-        Steps.elementIsEnable($(".share-button__text"), "Поделиться");
+        StepsPage.elementIsEnable($(".share-button__text"), "Поделиться");
     }
 
     @ValueSource(strings = {
@@ -48,11 +48,11 @@ public class CartBooksTests extends TestBase {
     @ParameterizedTest(name = "Есть дополнительный раздел {0}")
     @DisplayName("Доп. элемент. ")
     void displayedCategoriesInTopMenu(String searchQuery) {
-        Steps.openPage(BASE_URL_RU);
-        Steps.clickOnElement($(".header").$(byText("Книги")), "Книги");
-        Steps.clickOnElement($(".book__description"), "первой книге на странице");
+        StepsPage.openPage(BASE_URL_RU);
+        StepsPage.clickOnElement($(".header").$(byText("Книги")), "Книги");
+        StepsPage.clickOnElement($(".book__description"), "первой книге на странице");
         sleep(2000);
-        Steps.elementShouldHaveText($(".resource-tabs"),
+        StepsPage.elementShouldHaveText($(".resource-tabs"),
                 "Дополнительный элемент карточки", searchQuery);
     }
 }

@@ -1,7 +1,7 @@
 package com.andreev.tests;
 
 import com.andreev.configurations.AuthConfig;
-import com.andreev.data.Steps;
+import com.andreev.pages.StepsPage;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -25,14 +25,14 @@ public class AuthorizationTests extends TestBase {
     @DisplayName("Успешная авторизация при вводе валидных email и password")
     @Test
     void successfulAuthorization() {
-        Steps.openPage(BASE_URL_RU);
-        Steps.clickOnElement($(".login-button"), "кнопке Войти");
-        Steps.clickOnElement($(".auth__subaction").$(byText("Почта")), "кнопке Почта");
-        Steps.setValueInField($("[name=email]"), "email", email);
-        Steps.setValueInField($("[name=password]"), "пароль", password);
+        StepsPage.openPage(BASE_URL_RU);
+        StepsPage.clickOnElement($(".login-button"), "кнопке Войти");
+        StepsPage.clickOnElement($(".auth__subaction").$(byText("Почта")), "кнопке Почта");
+        StepsPage.setValueInField($("[name=email]"), "email", email);
+        StepsPage.setValueInField($("[name=password]"), "пароль", password);
         sleep(5000);
-        Steps.clickOnElement($(byText("Войти")), "кнопке Войти");
-        Steps.elementContainsText($(".user-avatar").lastChild(),
+        StepsPage.clickOnElement($(byText("Войти")), "кнопке Войти");
+        StepsPage.elementContainsText($(".user-avatar").lastChild(),
                 "Селектор хеддера user-avatar", login);
     }
 
@@ -41,13 +41,13 @@ public class AuthorizationTests extends TestBase {
     void unsuccessfulAuthorization() {
         String incorrectPassword = "123aa";
 
-        Steps.openPage(BASE_URL_RU);
-        Steps.clickOnElement($(".login-button"), "кнопке Войти");
-        Steps.clickOnElement($(".auth__subaction").$(byText("Почта")), "кнопке Почта");
-        Steps.setValueInField($("[name=email]"), "email", email);
-        Steps.setValueInField($("[name=password]"), "пароль (валидный)", password);
+        StepsPage.openPage(BASE_URL_RU);
+        StepsPage.clickOnElement($(".login-button"), "кнопке Войти");
+        StepsPage.clickOnElement($(".auth__subaction").$(byText("Почта")), "кнопке Почта");
+        StepsPage.setValueInField($("[name=email]"), "email", email);
+        StepsPage.setValueInField($("[name=password]"), "пароль (валидный)", password);
         sleep(2000);
-        Steps.setValueInField($("[name=password]"), "пароль (неверный)", incorrectPassword);
-        Steps.elementIsDisabled($(byText("Войти")), "кнопка Войти");
+        StepsPage.setValueInField($("[name=password]"), "пароль (неверный)", incorrectPassword);
+        StepsPage.elementIsDisabled($(byText("Войти")), "кнопка Войти");
     }
 }
